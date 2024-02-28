@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import "../styles/Output.css";
 
 function Dropdown({
-  name, currentFormat, formatsToDisplay, handlerFunction,
+  name, currentFormat, formatsToDisplay, handlerFunction, label,
 }) {
   return (
     <label htmlFor={name}>
-      Input Format:
+      {label}
       <select
         id={name}
         value={currentFormat}
@@ -33,6 +33,7 @@ Dropdown.propTypes = {
       label: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  label: PropTypes.string.isRequired,
 };
 
 export default Dropdown;

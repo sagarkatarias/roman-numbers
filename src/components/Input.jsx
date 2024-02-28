@@ -37,8 +37,8 @@ function Input({ onConvert }) {
           onChange={handleNumberChange}
         />
       </label>
-      <Dropdown name="inputFormatSelect" currentFormat={inputFormat} formatsToDisplay={inputFormats} handlerFunction={handleInputFormatChange} />
-      <Dropdown name="outputFormatSelect" currentFormat={outputFormat} formatsToDisplay={outputFormats} handlerFunction={handleOutputFormatChange} />
+      <Dropdown name="inputFormatSelect" currentFormat={inputFormat} formatsToDisplay={inputFormats} handlerFunction={handleInputFormatChange} label="Input Format:" />
+      <Dropdown name="outputFormatSelect" currentFormat={outputFormat} formatsToDisplay={outputFormats} handlerFunction={handleOutputFormatChange} label="Output Format:" />
       <button onClick={handleConvert} type="button">Convert</button>
     </div>
   );
