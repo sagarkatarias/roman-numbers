@@ -1,0 +1,19 @@
+.output {
+    margin-top: 20px;
+    height: 50px;
+  }
+  
+  .output h2 {
+    margin-bottom: 10px;
+  }
+  
+  .output p {
+    padding: 10px;
+    color: green;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 100%;
+    box-sizing: border-box; 
+  }
+  
