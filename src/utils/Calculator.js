@@ -14,7 +14,7 @@ const romanNumerals = [
   { value: 1, numeral: "I" },
 ];
 
-function decimalToRoman(arg) {
+export const decimalToRoman = (arg) => {
   let decimal = arg;
 
   let result = "";
@@ -25,10 +25,10 @@ function decimalToRoman(arg) {
     }
   }
   return result;
-}
+};
 
-function binaryToRoman(binary) {
+export const binaryToRoman = (binary) => {
   // Convert binary to decimal
   const decimal = parseInt(binary, 2);
   return decimalToRoman(decimal);
-}
+};
