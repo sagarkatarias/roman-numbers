@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import Converter from '../routes/Converter';
+import '@testing-library/jest-dom';
 
 // Mock the Calculator module
 jest.mock('../utils/Calculator', () => ({

@@ -1,4 +1,5 @@
 import { binaryToRoman, decimalToRoman } from '../utils/Calculator';
+import '@testing-library/jest-dom';
 
 describe('binaryToRoman function', () => {
   test('converts binary "10111" to Roman numeral "XXIII"', () => {
@@ -27,6 +28,4 @@ describe('decimalToRoman function', () => {
     test('converts decimal "9" to Roman numeral "IX"', () => {
       expect(decimalToRoman('9')).toBe('IX');
     });
-  
-    // Add more test cases as needed
 });

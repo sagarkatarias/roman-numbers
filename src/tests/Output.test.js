@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Output from '../components/Output';
+import '@testing-library/jest-dom';
 
 describe('Output component', () => {
   test('renders the result correctly', () => {

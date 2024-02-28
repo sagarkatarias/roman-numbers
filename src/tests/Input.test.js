@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import Input from '../components/Input';
+import '@testing-library/jest-dom';
 
 // Mock the onConvert function
 const mockOnConvert = jest.fn();
