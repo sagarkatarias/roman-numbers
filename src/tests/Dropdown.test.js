@@ -1,8 +1,7 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import Dropdown from "../components/Dropdown";
-import '@testing-library/jest-dom';
-/* eslint-disable jsx-props-no-spreading */
+import "@testing-library/jest-dom";
 
 // Mock the handler function
 const mockHandlerFunction = jest.fn();
