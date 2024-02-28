@@ -30,4 +30,38 @@ describe('Input component', () => {
     expect(numberInput.value).toBe('23');
   });
 
+  test('calls onConvert with decimal option when "Convert" button is clicked', () => {
+    render(<Input {...props} />);
+    const numberInput = screen.getByLabelText('Number:');
+    const convertButton = screen.getByText('Convert');
+
+    // Set input values
+    fireEvent.change(numberInput, { target: { value: '23' } });
+
+    // Click the "Convert" button
+    fireEvent.click(convertButton);
+
+    // Verify that onConvert is called with the correct arguments
+    expect(mockOnConvert).toHaveBeenCalledWith('23', 'decimal', 'roman');
+  });
+
+  test('calls onConvert with binary option when "Convert" button is clicked', () => {
+    render(<Input onConvert={mockOnConvert} />);
+    
+    // Get input elements
+    const numberInput = screen.getByLabelText('Number:');
+    const inputFormatSelect = screen.getByLabelText('Input Format:');
+    const outputFormatSelect = screen.getByLabelText('Output Format:');
+    const convertButton = screen.getByText('Convert');
+
+    // Set input values
+    fireEvent.change(numberInput, { target: { value: '10111' } });
+    fireEvent.change(inputFormatSelect, { target: { value: 'binary' } });
+    fireEvent.change(outputFormatSelect, { target: { value: 'roman' } });
+
+    fireEvent.click(convertButton);
+
+    // Verify that onConvert is called with the correct arguments
+    expect(mockOnConvert).toHaveBeenCalledWith('10111', 'binary', 'roman');
+  });
 });
