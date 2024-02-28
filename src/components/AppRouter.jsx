@@ -4,10 +4,12 @@ import Converter from "../routes/Converter";
 
 export function AppRouter() {
   return (
-    <Routes>
-      <Route path="/" element={<Converter />} />
-      <Route path="/converter" element={<Converter />} />
-    </Routes>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Converter />} />
+        <Route path="/converter" element={<Converter />} />
+      </Routes>
+    </div>
   );
 }
 

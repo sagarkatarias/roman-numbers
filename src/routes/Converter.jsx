@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Converter() {
+  const [input, setInput] = useState("");
   return (
-    <div>
+    <>
       Converter
-    </div>
+    </>
   );
 }
 
