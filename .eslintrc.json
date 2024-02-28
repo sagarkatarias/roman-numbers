@@ -12,6 +12,7 @@
     "rules": {
         "quotes": ["error", "double"],
         "import/no-named-as-default": "off",
-        "no-plusplus": "off"
+        "no-plusplus": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
 }
