@@ -9,11 +9,12 @@
   
   .input-form input,
   .input-form select {
-    width: 100%;
+    width: calc(100% - 8px);
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
   }
   
   .input-form button {
